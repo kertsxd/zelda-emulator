@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>The Legend of Zelda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.emulatorjs.org/loader.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a 60%, #2400f3 100%);
+            color: #fff;
+            font-family: 'Orbitron', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images3.alphacoders.com/631/631745.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(30, 30, 30, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 0 30px #002066;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #0004ff;
+            text-shadow: 2px 2px 8px #000;
+            margin-bottom: 10px;
+        }
+        .zelda-img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #0400ff;
+            margin: 20px auto;
+            display: block;
+        }
+        .btn {
+            display: inline-block;
+            background: #cde400;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 0 10px #2bc20d;
+            transition: background 0.2s;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #009eb3;
+        }
+        ul {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        #game {
+            width: 100%;
+            max-width: 640px;
+            aspect-ratio: 4/3;
+            margin: 20px auto;
+            background: #000;
+            border-radius: 8px;
+            box-shadow: 0 0 20px #1101f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Legend of Zelda: The Minish Cap</h1>
+        <img src="https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3nsk.jpg" alt="The Legend of Zelda: The Minish Cap" class="zelda-img"> 
+        <p>¡Bienvenido a una nueva aventura de Link! Explora mazmorras, resuelve acertijos y salva Hyrule.</p>
+
+        <div style="background:rgba(0,0,0,0.7);border-radius:10px;padding:10px;margin-bottom:20px;">
+            <h2 style="color:#ffcc00;">Controles básicos</h2>
+            <ul>
+                <li><b>Flechas</b>: Moverse</li>
+                <li><b>Z</b>: Botón A (acción/confirmar)</li>
+                <li><b>X</b>: Botón B (espada/cancelar)</li>
+                <li><b>A</b>: Botón L</li>
+                <li><b>S</b>: Botón R</li>
+                <li><b>Enter</b>: Start (pausa/menú)</li>
+                <li><b>Espacio</b>: Select</li>
+            </ul>
+            <p>Si el juego no carga, espera unos segundos o recarga la página.<br>
+            <b>Nota:</b> Usa el teclado físico para jugar.</p>
+        </div>
+
+        <!-- Emulador GBA -->
+        <div id="game"></div>
+
+        <a href="Nexogaming.html" class="btn">Volver al Nexo</a>
+    </div>
+
+    <script>
+        // Configuración para que cargue directamente la ROM desde una URL
+        window.EJS_player = "#game";
+        window.EJS_core = "gba";
+        // Cambia esta URL por la de tu ROM propia si tienes Minish Cap
+        window.EJS_gameUrl = "zelda.gba";
+        window.EJS_pathtodata = "https://cdn.emulatorjs.org/";
+        window.EJS_language = "es";
+    </script>
+</body>
+</html>
